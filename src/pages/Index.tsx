@@ -27,7 +27,7 @@ const Index = () => {
                 Become AI Native.<br />Own Your Future.
               </motion.h1>
               <motion.p variants={fadeUp} custom={1} className="mt-6 text-lg opacity-90 max-w-xl">
-                Hands-on learning by tech practitioners who build with AI every day.
+                From AI Curious to AI Fluent. Get hands-on learning from AI industry experts who build with AI every day.
               </motion.p>
               <motion.div variants={fadeUp} custom={2} className="mt-8 flex flex-wrap gap-4">
                 <Link to="/enrollment">
