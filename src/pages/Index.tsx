@@ -24,7 +24,7 @@ const Index = () => {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <motion.div initial="hidden" animate="visible" className="text-primary-foreground">
               <motion.h1 variants={fadeUp} custom={0} className="text-4xl font-bold md:text-5xl lg:text-6xl text-balance leading-tight">
-                Become AI Native.<br />Shape Tomorrow.
+                Become AI Native.<br />Own Your Future.
               </motion.h1>
               <motion.p variants={fadeUp} custom={1} className="mt-6 text-lg opacity-90 max-w-xl">
                 Hands-on learning by tech practitioners who build with AI every day.
