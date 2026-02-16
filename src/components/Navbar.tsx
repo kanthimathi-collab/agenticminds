@@ -29,7 +29,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-1 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.to}
@@ -43,7 +43,7 @@ const Navbar = () => {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-3">
           <Link to="/enrollment">
             <Button className="gradient-accent border-0 text-accent-foreground font-semibold shadow-md hover:opacity-90">
               Enroll Now
@@ -53,7 +53,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden p-2 text-foreground"
+          className="md:hidden p-2 text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
@@ -68,7 +68,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="fixed inset-0 top-16 z-40 bg-surface lg:hidden"
+            className="fixed inset-0 top-16 z-40 bg-surface md:hidden"
           >
             <nav className="flex flex-col items-center gap-2 p-8">
               {navLinks.map((link) => (
