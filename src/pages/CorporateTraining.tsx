@@ -77,7 +77,7 @@ const CorporateTraining = () => {
               </div>
             ))}
           </div>
-          <p className="mt-8 text-center font-heading text-lg font-semibold text-primary">Agentic Minds solves all three problems with a proven approach.</p>
+          <p className="mt-8 text-center font-heading text-lg font-semibold text-primary">AgenticMinds solves all three problems with a proven approach.</p>
         </div>
       </section>
 
@@ -106,7 +106,7 @@ const CorporateTraining = () => {
       {/* Why Choose Us */}
       <section className="section-padding bg-surface">
         <div className="container-narrow">
-          <h2 className="text-3xl font-bold md:text-4xl text-center">Why Choose Agentic Minds?</h2>
+          <h2 className="text-3xl font-bold md:text-4xl text-center">Why Choose AgenticMinds?</h2>
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {[
               { icon: BookOpen, title: "Proven Methodology", items: ["Problem-based learning that drives adoption", "Focus on thinking patterns, not just tools", "Real results with real students"] },

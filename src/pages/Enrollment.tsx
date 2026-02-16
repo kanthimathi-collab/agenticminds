@@ -253,7 +253,7 @@ const Enrollment = () => {
                 <CheckCircle2 size={48} className="text-success" />
               </div>
               <div>
-                <h2 className="text-3xl font-bold">Welcome to Agentic Minds!</h2>
+                <h2 className="text-3xl font-bold">Welcome to AgenticMinds!</h2>
                 <p className="mt-2 text-muted-foreground">Enrollment confirmed for {student.firstName} {student.lastName}</p>
               </div>
 

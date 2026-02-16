@@ -21,9 +21,9 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 border-b border-border bg-surface/90 backdrop-blur-md">
       <div className="container-narrow flex h-16 items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logoImg} alt="Agentic Minds logo" className="h-10 w-auto" />
+          <img src={logoImg} alt="AgenticMinds logo" className="h-10 w-auto" />
           <div className="flex flex-col leading-none">
-            <span className="font-heading text-lg font-bold text-foreground">Agentic <span className="text-secondary">Minds</span></span>
+            <span className="font-heading text-lg font-bold text-foreground">Agentic<span className="text-secondary">Minds</span></span>
             <span className="text-[10px] font-medium tracking-widest text-muted-foreground uppercase">AI-Native Training</span>
           </div>
         </Link>
