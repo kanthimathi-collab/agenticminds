@@ -45,7 +45,7 @@ const Index = () => {
                 {[
                   { icon: Award, text: "AI Industry Experts" },
                   { icon: Monitor, text: "Live Online Learning" },
-                  { icon: GraduationCap, text: "Custom Middle School Focus" },
+                  { icon: GraduationCap, text: "5th–8th Graders" },
                   { icon: Zap, text: "Bay Area's Premier AI Educators" },
                 ].map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-center gap-2 text-sm opacity-85">
