@@ -41,12 +41,12 @@ const Index = () => {
                   </Button>
                 </Link>
               </motion.div>
-              <motion.div variants={fadeUp} custom={3} className="mt-10 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-4">
+              <motion.div variants={fadeUp} custom={3} className="mt-10 flex flex-wrap gap-x-6 gap-y-4">
                 {[
                   { icon: Award, text: "Tech Industry Veterans" },
                   { icon: Monitor, text: "Live Online Learning" },
                   { icon: GraduationCap, text: "5th–8th Graders" },
-                  { icon: Zap, text: "Bay Area's Premier AI Ed" },
+                  { icon: Zap, text: "Bay Area's Premier AI Educators" },
                 ].map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-center gap-2 text-sm opacity-85">
                     <Icon size={18} className="shrink-0" />
