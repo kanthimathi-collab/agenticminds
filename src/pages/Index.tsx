@@ -210,36 +210,35 @@ const Index = () => {
           </div>
 
           <div className="mt-12 rounded-2xl bg-surface-alt p-8 shadow-lg border border-border">
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm border-collapse">
-                <thead>
-                  <tr>
-                    <th className="text-left p-4 border-b border-border font-bold text-base">
-                      <span className="flex items-center gap-2"><Users size={20} className="text-accent" /> Who It's For</span>
-                    </th>
-                    <th className="text-left p-4 border-b border-border font-bold text-base">
-                      <span className="flex items-center gap-2"><Lightbulb size={20} className="text-accent" /> What You'll Get</span>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
+            <div className="grid gap-10 lg:grid-cols-2">
+              {/* Who It's For */}
+              <div>
+                <h3 className="text-xl font-bold flex items-center gap-2"><Users size={22} className="text-accent" /> Who It's For</h3>
+                <ul className="mt-4 space-y-3 text-sm">
                   {[
-                    ["SMB executives and teams (50–500 employees)", "Problem-based training (not just tools)"],
-                    ["Companies beyond tech hubs needing AI expertise", "Measurable ROI and outcomes"],
-                    ["Teams using AI superficially without strategy", "Customized to your industry"],
-                    ["Organizations ready for transformation", "Taught by tech practitioners"],
-                  ].map(([who, what], i) => (
-                    <tr key={i} className={i % 2 === 0 ? "bg-surface" : ""}>
-                      <td className="p-4 border-b border-border/50">
-                        <span className="flex items-start gap-2"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-accent" />{who}</span>
-                      </td>
-                      <td className="p-4 border-b border-border/50">
-                        <span className="flex items-start gap-2"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-accent" />{what}</span>
-                      </td>
-                    </tr>
+                    "SMB executives and teams (50–500 employees)",
+                    "Companies beyond tech hubs needing AI expertise",
+                    "Teams using AI superficially without strategy",
+                    "Organizations ready for transformation",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-accent" />{item}</li>
                   ))}
-                </tbody>
-              </table>
+                </ul>
+              </div>
+              {/* What You'll Get */}
+              <div>
+                <h3 className="text-xl font-bold flex items-center gap-2"><Lightbulb size={22} className="text-accent" /> What You'll Get</h3>
+                <ul className="mt-4 space-y-3 text-sm">
+                  {[
+                    "Problem-based training (not just tools)",
+                    "Measurable ROI and outcomes",
+                    "Customized to your industry",
+                    "Taught by tech practitioners",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2"><CheckCircle2 size={16} className="mt-0.5 shrink-0 text-accent" />{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-4">
