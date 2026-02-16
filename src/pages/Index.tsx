@@ -106,7 +106,7 @@ const Index = () => {
           </div>
 
           <p className="mt-8 text-center font-heading text-lg font-semibold text-primary">
-            We don't teach kids to use ChatGPT. We teach them to think and operate in an AI-powered world.
+            We don't teach kids to use ChatGPT. We teach them AI-native thinking: how to ethically leverage AI agents to bring their boldest ideas to life in hours, not months.
           </p>
         </div>
       </section>
