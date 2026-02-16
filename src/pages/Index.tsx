@@ -77,17 +77,17 @@ const Index = () => {
               {
                 title: "Traditional Approach",
                 items: ["Manual research", "Individual work", "Linear thinking"],
-                color: "border-border bg-muted/50",
+                color: "bg-primary text-primary-foreground",
               },
               {
                 title: "Using AI Tools",
                 items: ["Copy-paste prompts", "Surface-level usage", "Dependency on tutorials"],
-                color: "border-border bg-muted/50",
+                color: "bg-primary text-primary-foreground",
               },
               {
                 title: "AI Native Thinking",
                 items: ["Problem-solving partnerships", "Workflow integration", "Critical evaluation"],
-                color: "border-primary/40 bg-primary/5 ring-2 ring-primary/30",
+                color: "bg-primary text-primary-foreground ring-2 ring-secondary",
                 highlight: true,
               },
             ].map((col) => (
@@ -96,7 +96,7 @@ const Index = () => {
                 <ul className="mt-4 space-y-3">
                   {col.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm">
-                      <CheckCircle2 size={16} className={col.highlight ? "text-primary" : "text-muted-foreground"} />
+                      <CheckCircle2 size={16} className={col.highlight ? "text-secondary" : "text-primary-foreground/70"} />
                       {item}
                     </li>
                   ))}
