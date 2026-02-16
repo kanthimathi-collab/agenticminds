@@ -33,7 +33,7 @@ const Enrollment = () => {
 
   const nextStep = () => {
     if (step === 0 && !format) { toast.error("Please select a program format."); return; }
-    if (step === 1 && (!student.firstName || !student.lastName || !student.dob || !student.grade || !parent.firstName || !parent.lastName || !parent.email || !parent.phone || !address.street || !address.city || !address.state || !address.zip || !emergency.name || !emergency.phone || !emergency.relationship)) {
+    if (step === 1 && (!student.firstName || !student.lastName || !student.dob || !student.grade || !parent.firstName || !parent.lastName || !parent.email || !parent.phone || !parent.relationship || !address.street || !address.city || !address.state || !address.zip || !emergency.name || !emergency.phone || !emergency.relationship)) {
       toast.error("Please fill in all required fields."); return;
     }
     if (step === 2 && (!terms.tos || !terms.conduct || !terms.charge)) {
@@ -143,7 +143,7 @@ const Enrollment = () => {
                     <div><Label>Phone *</Label><Input type="tel" value={parent.phone} onChange={(e) => setParent({ ...parent, phone: e.target.value })} required /></div>
                   </div>
                   <div>
-                    <Label>Relationship</Label>
+                    <Label>Relationship *</Label>
                     <Select value={parent.relationship} onValueChange={(v) => setParent({ ...parent, relationship: v })}>
                       <SelectTrigger><SelectValue placeholder="Select" /></SelectTrigger>
                       <SelectContent>{["Parent", "Guardian", "Other"].map((r) => <SelectItem key={r} value={r}>{r}</SelectItem>)}</SelectContent>
