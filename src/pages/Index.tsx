@@ -87,7 +87,7 @@ const Index = () => {
               {
                 title: "AI Native Thinking",
                 items: ["Problem-solving partnerships", "Workflow integration", "Critical evaluation"],
-                color: "border-primary/30 bg-primary/5 ring-1 ring-primary/10",
+                color: "border-primary/40 bg-primary/5 ring-2 ring-primary/30",
                 highlight: true,
               },
             ].map((col) => (
