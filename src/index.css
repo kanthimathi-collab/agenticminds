@@ -6,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 220 13% 13%;
+    --background: 220 15% 97%;
+    --foreground: 220 20% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 13% 13%;
+    --card-foreground: 220 20% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 13%;
+    --popover-foreground: 220 20% 12%;
 
-    --primary: 224 76% 33%;
+    --primary: 215 50% 23%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 192 91% 36%;
+    --secondary: 187 72% 44%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 220 14% 93%;
+    --muted-foreground: 220 10% 44%;
 
-    --accent: 21 90% 48%;
+    --accent: 187 72% 44%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 90%;
-    --input: 220 13% 90%;
-    --ring: 224 76% 33%;
+    --border: 220 14% 88%;
+    --input: 220 14% 88%;
+    --ring: 215 50% 23%;
 
     --radius: 0.625rem;
 
@@ -40,7 +40,7 @@
     --success-foreground: 0 0% 100%;
 
     --surface: 0 0% 100%;
-    --surface-alt: 210 20% 96%;
+    --surface-alt: 220 14% 95%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -57,18 +57,18 @@
 
   .dark {
     --background: 220 20% 7%;
-    --foreground: 210 20% 96%;
+    --foreground: 210 15% 93%;
     --card: 220 20% 10%;
-    --card-foreground: 210 20% 96%;
+    --card-foreground: 210 15% 93%;
     --popover: 220 20% 10%;
-    --popover-foreground: 210 20% 96%;
-    --primary: 224 76% 48%;
+    --popover-foreground: 210 15% 93%;
+    --primary: 215 45% 30%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 192 91% 36%;
+    --secondary: 187 72% 44%;
     --secondary-foreground: 0 0% 100%;
     --muted: 220 20% 15%;
     --muted-foreground: 220 9% 60%;
-    --accent: 21 90% 48%;
+    --accent: 187 72% 44%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -119,7 +119,7 @@
     background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
   }
   .gradient-accent {
-    background: linear-gradient(135deg, hsl(var(--accent)), hsl(21 95% 55%));
+    background: linear-gradient(135deg, hsl(var(--accent)), hsl(192 80% 50%));
   }
   .gradient-text {
     background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));

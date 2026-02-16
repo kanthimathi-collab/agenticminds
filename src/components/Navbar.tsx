@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImg from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -19,9 +20,12 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/90 backdrop-blur-md">
       <div className="container-narrow flex h-16 items-center justify-between px-4">
-        <Link to="/" className="flex items-center gap-2 font-heading text-xl font-bold text-primary">
-          <span className="gradient-primary rounded-lg px-2 py-1 text-primary-foreground text-sm font-bold">AM</span>
-          Agentic Minds
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logoImg} alt="Agentic Minds logo" className="h-10 w-auto" />
+          <div className="flex flex-col leading-none">
+            <span className="font-heading text-lg font-bold text-foreground">Agentic <span className="text-secondary">Minds</span></span>
+            <span className="text-[10px] font-medium tracking-widest text-muted-foreground uppercase">AI-Native Training</span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
