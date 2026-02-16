@@ -43,7 +43,7 @@ const Index = () => {
               </motion.div>
               <motion.div variants={fadeUp} custom={3} className="mt-10 flex flex-wrap gap-x-6 gap-y-4">
                 {[
-                  { icon: Award, text: "Tech Industry Veterans" },
+                  { icon: Award, text: "AI Industry Experts" },
                   { icon: Monitor, text: "Live Online Learning" },
                   { icon: GraduationCap, text: "5th–8th Graders" },
                   { icon: Zap, text: "Bay Area's Premier AI Educators" },
