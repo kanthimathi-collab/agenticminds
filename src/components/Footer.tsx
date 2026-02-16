@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-70">
-          <p>© {new Date().getFullYear()} Agentic Minds. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} AgenticMinds. All rights reserved.</p>
         </div>
       </div>
     </footer>
