@@ -92,7 +92,7 @@ const Index = () => {
               },
             ].map((col) => (
               <div key={col.title} className={`rounded-xl border-2 p-6 ${col.color}`}>
-                <h3 className={`text-lg font-bold ${col.highlight ? "text-primary" : ""}`}>{col.title}</h3>
+                <h3 className={`text-lg font-bold ${col.highlight ? "text-primary-foreground" : ""}`}>{col.title}</h3>
                 <ul className="mt-4 space-y-3">
                   {col.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm">
