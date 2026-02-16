@@ -18,8 +18,8 @@ const Index = () => {
   return (
     <div>
       {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden gradient-primary">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(192_91%_36%/0.3),transparent_60%)]" />
+      <section className="relative overflow-hidden bg-primary">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(187_72%_44%/0.12),transparent_60%)]" />
         <div className="container-narrow relative px-4 py-20 md:py-28 lg:py-36">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <motion.div initial="hidden" animate="visible" className="text-primary-foreground">
