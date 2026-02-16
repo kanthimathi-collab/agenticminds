@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 
 const values = [
-  { icon: Lightbulb, title: "AI Tech Builders First, Educators Second", desc: "We teach what we've actually done. Our curriculum comes from real experience building AI native systems, not academic theory." },
+  { icon: Lightbulb, title: "We Are AI Tech Builders First, Educators Second", desc: "We teach what we've actually done. Our curriculum comes from real experience building AI native systems, not academic theory." },
   { icon: Brain, title: "Problem-Based Learning", desc: "Tools change constantly. Thinking patterns are durable. We teach students to solve meaningful problems, using AI as a partner." },
   { icon: ShieldCheck, title: "Ethical AI Foundation", desc: "Being AI native means understanding not just what's possible, but what's responsible." },
   { icon: Heart, title: "Accessible Excellence", desc: "Quality AI education shouldn't be limited to elite programs. We're committed to accessible pricing for youth while delivering professional-grade training." },
