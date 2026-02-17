@@ -14,7 +14,96 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      enrollments: {
+        Row: {
+          address_city: string
+          address_country: string
+          address_state: string
+          address_street: string
+          address_zip: string
+          confirmation_id: string
+          created_at: string
+          emergency_name: string
+          emergency_phone: string
+          emergency_relationship: string
+          id: string
+          opted_into_updates: boolean
+          parent_email: string
+          parent_first_name: string
+          parent_last_name: string
+          parent_phone: string
+          parent_relationship: string
+          payment_plan: string
+          program_format: string
+          student_dob: string
+          student_experience: string | null
+          student_first_name: string
+          student_grade: string
+          student_interests: string | null
+          student_last_name: string
+          student_school: string | null
+          total_charged: string
+        }
+        Insert: {
+          address_city: string
+          address_country?: string
+          address_state: string
+          address_street: string
+          address_zip: string
+          confirmation_id: string
+          created_at?: string
+          emergency_name: string
+          emergency_phone: string
+          emergency_relationship: string
+          id?: string
+          opted_into_updates?: boolean
+          parent_email: string
+          parent_first_name: string
+          parent_last_name: string
+          parent_phone: string
+          parent_relationship: string
+          payment_plan: string
+          program_format: string
+          student_dob: string
+          student_experience?: string | null
+          student_first_name: string
+          student_grade: string
+          student_interests?: string | null
+          student_last_name: string
+          student_school?: string | null
+          total_charged: string
+        }
+        Update: {
+          address_city?: string
+          address_country?: string
+          address_state?: string
+          address_street?: string
+          address_zip?: string
+          confirmation_id?: string
+          created_at?: string
+          emergency_name?: string
+          emergency_phone?: string
+          emergency_relationship?: string
+          id?: string
+          opted_into_updates?: boolean
+          parent_email?: string
+          parent_first_name?: string
+          parent_last_name?: string
+          parent_phone?: string
+          parent_relationship?: string
+          payment_plan?: string
+          program_format?: string
+          student_dob?: string
+          student_experience?: string | null
+          student_first_name?: string
+          student_grade?: string
+          student_interests?: string | null
+          student_last_name?: string
+          student_school?: string | null
+          total_charged?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

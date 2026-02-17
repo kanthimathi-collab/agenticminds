@@ -10,6 +10,7 @@ import {
 import { CheckCircle2, CreditCard, Lock, Calendar, Download, Home } from "lucide-react";
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
 
 const steps = ["Program Selection", "Student Info", "Payment", "Confirmation"];
 
@@ -31,7 +32,9 @@ const Enrollment = () => {
   const [terms, setTerms] = useState({ tos: false, conduct: false, charge: false, updates: false });
   const [confirmationId] = useState(() => `AM-${Date.now().toString(36).toUpperCase()}`);
 
-  const nextStep = () => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const nextStep = async () => {
     if (step === 0 && !format) { toast.error("Please select a program format."); return; }
     if (step === 1 && (!student.firstName || !student.lastName || !student.dob || !student.grade || !parent.firstName || !parent.lastName || !parent.email || !parent.phone || !parent.relationship || !address.street || !address.city || !address.state || !address.zip || !emergency.name || !emergency.phone || !emergency.relationship)) {
       toast.error("Please fill in all required fields."); return;
@@ -39,6 +42,50 @@ const Enrollment = () => {
     if (step === 2 && (!terms.tos || !terms.conduct || !terms.charge)) {
       toast.error("Please accept all required terms."); return;
     }
+
+    // Save to database when completing payment step
+    if (step === 2) {
+      setSubmitting(true);
+      const totalCharged = paymentPlan === "full"
+        ? (format === "weekly" ? "$474" : "$569")
+        : (format === "weekly" ? "$170" : "$203");
+
+      const { error } = await supabase.from("enrollments").insert({
+        confirmation_id: confirmationId,
+        program_format: format,
+        payment_plan: paymentPlan,
+        student_first_name: student.firstName,
+        student_last_name: student.lastName,
+        student_dob: student.dob,
+        student_grade: student.grade,
+        student_school: student.school || null,
+        student_experience: student.experience || null,
+        student_interests: student.interests || null,
+        parent_first_name: parent.firstName,
+        parent_last_name: parent.lastName,
+        parent_email: parent.email,
+        parent_phone: parent.phone,
+        parent_relationship: parent.relationship,
+        address_street: address.street,
+        address_city: address.city,
+        address_state: address.state,
+        address_zip: address.zip,
+        address_country: address.country,
+        emergency_name: emergency.name,
+        emergency_phone: emergency.phone,
+        emergency_relationship: emergency.relationship,
+        opted_into_updates: terms.updates,
+        total_charged: totalCharged,
+      });
+
+      setSubmitting(false);
+      if (error) {
+        toast.error("Something went wrong saving your enrollment. Please try again.");
+        console.error("Enrollment save error:", error);
+        return;
+      }
+    }
+
     setStep((s) => Math.min(s + 1, 3));
   };
 
@@ -239,8 +286,8 @@ const Enrollment = () => {
 
               <div className="flex gap-4">
                 <Button variant="outline" onClick={() => setStep(1)} className="flex-1 py-6">Back</Button>
-                <Button onClick={nextStep} className="flex-1 gradient-accent border-0 text-accent-foreground font-bold py-6 hover:opacity-90">
-                  <CreditCard size={18} className="mr-2" /> Complete Enrollment & Pay
+                <Button onClick={nextStep} disabled={submitting} className="flex-1 gradient-accent border-0 text-accent-foreground font-bold py-6 hover:opacity-90">
+                  <CreditCard size={18} className="mr-2" /> {submitting ? "Processing…" : "Complete Enrollment & Pay"}
                 </Button>
               </div>
             </div>
