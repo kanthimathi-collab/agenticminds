@@ -45,7 +45,7 @@ const SprintBreakCamp = () => {
             🚀 1-WEEK VIRTUAL PROGRAM · AGES 10–14
           </span>
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground">
-            AI <span className="text-secondary">Sprint Break</span>
+            AI <span className="text-secondary">Spring Break</span>
             <br />
             <span className="text-primary-foreground">Camp</span>
           </h1>
