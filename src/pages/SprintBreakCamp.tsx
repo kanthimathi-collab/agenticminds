@@ -4,7 +4,7 @@ import posterImg from "@/assets/ai-bootcamp-poster.jpg";
 
 const SprintBreakCamp = () => {
   return (
-    <div className="bg-[hsl(210,30%,12%)] min-h-screen">
+    <div className="bg-primary min-h-screen">
       {/* Poster */}
       <div className="max-w-3xl mx-auto px-4 py-12">
         <img
